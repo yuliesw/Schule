@@ -3,11 +3,27 @@ public class Held {
     private int staerke;
     private int lebenspunkte;
     private Waffe meineWaffe; 
+    private Waffen [] Waffenlager; 
 
     public Held(String name, int staerke, int lebenspunkte) {
         this.name = name;
         this.staerke = staerke;
         this.lebenspunkte = lebenspunkte;
+    }
+    
+    public void Waffenlager (){
+        Waffenlager = new Waffen [4];
+        Waffenlager [0]= new Waffen ("Holz",3);
+        Waffenlager [1]= new Waffen ("Eisen",4);
+        Waffenlager [2]= new Waffen ("Stahl",5);
+        Waffenlager [3]= new Waffen ("Holz",5);
+        
+    }
+
+    public void getWaffenlager (){
+        for ( int i=0; i<Waffenlager.length; i++){
+            System.out.println("Die gespeicherte Waffe "+i+" hat das Material"+Waffenlager[i].getMaterial+" und den Magiewert "+Waffenlager.getMagie);
+        }
     }
 
     public int getAngriffswert() {
