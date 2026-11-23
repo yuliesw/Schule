@@ -38,7 +38,8 @@ public class Stack {
             }
         }
         public void pop(){
-            nextNode =
+            if ( head != isEmpty()){
+                head = head.getNext();
         }
     }
 }
